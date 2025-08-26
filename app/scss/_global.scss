@@ -1,0 +1,24 @@
+@use "vars";
+@use "fonts";
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+  color: vars.$default;
+  @extend %quicksand-500;
+}
+
+.header,
+.main,
+.footer,
+.container {
+  border: 1px solid blue;
+  margin: 3px;
+  padding: 3px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

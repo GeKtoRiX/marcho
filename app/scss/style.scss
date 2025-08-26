@@ -1,6 +1,59 @@
-@import "vars";
-@import "fonts";
-@import "reset";
-@import "global";
+@use "vars";
+@use "fonts";
+@use "reset";
+@use "global";
+@use "media";
 
-@import "media";
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+
+    .menu {
+      &__list {
+        display: flex;
+        gap: 35px;
+      }
+
+      &__list-link {
+        border-bottom: 1px solid transparent;
+        color: vars.$title;
+        transition: all 0.3s;
+        @extend %quicksand-400;
+        &:hover {
+          color: vars.$accent;
+          border-bottom: 1px solid vars.$accent;
+          @extend %quicksand-500;
+        }
+      }
+      &__list-link--active {
+        border-bottom: 1px solid vars.$accent;
+        color: vars.$accent;
+        @extend %quicksand-500;
+      }
+    }
+    .user-nav {
+      display: flex;
+      gap: 25px;
+      &__link {
+        position: relative;
+      }
+      &__num {
+        position: absolute;
+        top: -9px;
+        right: -12px;
+
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        background-color: vars.$accent;
+      }
+    }
+  }
+}
