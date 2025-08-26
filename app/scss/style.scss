@@ -5,6 +5,9 @@
 @use "media";
 
 .header {
+  a {
+    color: vars.$title;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -40,20 +43,136 @@
       &__link {
         position: relative;
       }
+      &__link .fa-solid {
+        font-size: 20px;
+      }
       &__num {
         position: absolute;
-        top: -9px;
-        right: -12px;
+        top: -7px;
+        right: -10px;
 
-        width: 20px;
-        height: 20px;
+        width: 17px;
+        height: 17px;
         border-radius: 50%;
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 10px;
+        line-height: 17px;
         text-align: center;
         color: #fff;
         background-color: vars.$accent;
       }
+    }
+  }
+}
+
+.footer {
+  a {
+    display: block;
+    color: vars.$default;
+  }
+  background-color: vars.$bg;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 70px 0 40px;
+    border-bottom: 1px solid #ececec;
+
+    &__item:first-child {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__item:nth-of-type(2) {
+      width: 170px;
+    }
+
+    &__item:nth-of-type(3) {
+      width: 170px;
+    }
+
+    &__item:last-child {
+      width: 470px;
+    }
+
+    &__social-list {
+      display: flex;
+      gap: 15px;
+    }
+    &__social-link .fa-brands {
+      transition: all 0.5s;
+    }
+    &__social-link > i {
+      font-size: 15px;
+    }
+    &__social-link > i:hover {
+      font-size: 18px;
+      color: vars.$accent;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      @extend %roboto-400;
+      font-size: 22px;
+      color: vars.$title;
+    }
+
+    &__text {
+      margin-bottom: 60px;
+    }
+
+    &__form {
+      display: flex;
+    }
+
+    &__form-input {
+      flex: 2 1 auto;
+      border: none;
+      margin-right: 8px;
+      padding: 12px 18px;
+      box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+      &::placeholder {
+        color: vars.$default;
+        font-size: 16px;
+      }
+    }
+
+    &__form-btn {
+      flex: 1 1 auto;
+      border: none;
+      padding: 12px 18px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: vars.$accent-button;
+      box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      cursor: pointer;
+    }
+  }
+
+  .footer-bottom {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 32px;
+    &__item {
+      @extend %quicksand-400;
+      font-size: 12px;
+      line-height: 34px;
+    }
+    &__accept {
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
   }
 }
