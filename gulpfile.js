@@ -30,7 +30,11 @@ function styles() {
 
 function scripts() {
   return gulp
-    .src(["./node_modules/jquery/dist/jquery.js", "./app/js/main.js"])
+    .src([
+      "./node_modules/jquery/dist/jquery.js",
+      "./node_modules/slick-carousel/slick/slick.js",
+      "./app/js/main.js",
+    ])
     .pipe(concat("main.min.js"))
     .pipe(terser())
     .pipe(gulp.dest("./app/js"))
