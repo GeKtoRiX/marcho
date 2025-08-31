@@ -25,10 +25,26 @@ body {
   padding: 0 15px;
 }
 
-// .header,
-// .main,
-// .footer,
-// .container {
-//   border: 1px solid blue;
-//   margin-top: 3px;
-// }
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 65px;
+  color: vars.$title;
+}
+.text {
+  max-width: 570px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.header,
+.main,
+.footer,
+.container,
+section {
+  border: 1px solid blue;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}

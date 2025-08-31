@@ -71,8 +71,6 @@
       display: flex;
       align-items: center;
     }
-    &__img {
-    }
   }
 }
 
@@ -261,6 +259,162 @@
         height: 6px;
         border-radius: 50%;
         background-color: rgb(254, 62, 87);
+      }
+    }
+  }
+}
+
+.categories-info {
+  padding: 120px 0;
+  background: url(../images/decor/categories-decor-bg-geometric-shapeLeft.png)
+    no-repeat center left;
+
+  &__inner {
+    background: url(../images/decor/categories-decor-bg-geometric-shapeRight.png)
+      no-repeat center right;
+
+    .container {
+      // border: 1px solid red;
+      .info {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 110px;
+        position: relative;
+        z-index: 1;
+
+        &::before,
+        &::after {
+          // border: 1px solid red;
+          content: "";
+          position: absolute;
+          z-index: -1;
+        }
+        &::before {
+          background: url(../images/decor/categories-decor-bg-cirlce.png)
+            no-repeat center center;
+          top: -45px;
+          left: -60px;
+          width: 120px;
+          height: 121px;
+        }
+        &::after {
+          background: url(../images/decor/categories-decor-bg-dots.png)
+            no-repeat center center;
+          bottom: -20px;
+          right: -20px;
+          width: 65px;
+          height: 52px;
+          z-index: -999;
+        }
+
+        &__item {
+          // border: 1px solid red;
+          background-color: #ffffff;
+          min-width: 370px;
+          padding: 60px 30px;
+          box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+          transition: box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        &__item:hover {
+          // border: 1px solid red;
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          cursor: context-menu;
+        }
+
+        &__item-header {
+          // border: 1px solid red;
+          margin: 35px 0 10px;
+          font-size: 22px;
+          line-height: 26px;
+          @extend %roboto-400;
+          color: vars.$title;
+        }
+        &__item-text {
+          // border: 1px solid red;
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+
+      .categories {
+        // border: 1px solid red;
+
+        // .title in global
+        // .text in global
+        &__grid {
+          // border: 1px solid red;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 30px;
+          min-height: 640px;
+        }
+
+        &__grid-item {
+          padding-top: 35px;
+          padding-left: 40px;
+          background: no-repeat center center / cover;
+          box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+          transition: box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        &__grid-item:hover {
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          cursor: context-menu;
+        }
+        &__grid-item:nth-child(1) {
+          grid-row: span 2;
+          .categories__grid-item-subtitle,
+          .categories__grid-item-link:hover {
+            color: #5800e4;
+          }
+        }
+        &__grid-item:nth-child(2) {
+          grid-column: span 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-top: 0;
+          .categories__grid-item-subtitle,
+          .categories__grid-item-link:hover {
+            color: vars.$accent-button;
+          }
+        }
+        &__grid-item:nth-child(3) {
+          .categories__grid-item-subtitle,
+          .categories__grid-item-link:hover {
+            color: #ffb534;
+          }
+        }
+        &__grid-item:nth-child(4) {
+          .categories__grid-item-subtitle,
+          .categories__grid-item-link:hover {
+            color: #34c3ff;
+          }
+        }
+
+        &__grid-item-subtitle {
+          margin-bottom: 5px;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        &__grid-item-title {
+          margin-bottom: 15px;
+          @extend %roboto-400;
+          font-size: 22px;
+          line-height: 26px;
+          color: vars.$title;
+        }
+        &__grid-item-link {
+          text-transform: uppercase;
+          @extend %roboto-400;
+          font-size: 16px;
+          color: #3f3c42;
+          transition: all 0.3s;
+        }
       }
     }
   }
