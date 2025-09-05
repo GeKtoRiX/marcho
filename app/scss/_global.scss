@@ -39,13 +39,51 @@ body {
   text-align: center;
 }
 
-// For developing
-.header,
-.main,
-.footer,
-.container,
-section {
-  border: 1px solid blue;
-  margin-top: 3px;
-  margin-bottom: 3px;
+.breadcrumbs {
+  // border: 1px solid red;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 20px;
+  &__link {
+    color: vars.$default;
+  }
+  &__list {
+    // border: 1px solid red;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+  }
+  &__item {
+    // border: 1px solid red;
+    position: relative;
+
+    &:first-child::before {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      content: "";
+      background: url(../images/breadcrumb/breadcrumbs-home.png) no-repeat
+        center center / cover;
+      left: -9px;
+      top: 50%;
+      transform: translate(-50%, -60%);
+    }
+
+    &:not(:last-child)::after {
+      width: 9px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      background: url(../images/breadcrumb/breadcrumbs-arrows-right.png)
+        no-repeat center center / cover;
+      right: -22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child > a {
+      color: vars.$accent;
+    }
+  }
 }

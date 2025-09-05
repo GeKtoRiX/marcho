@@ -182,6 +182,27 @@
   }
 }
 
+.top {
+  &__container {
+    // border: 1px solid red;
+    min-width: 1700px;
+    padding: 120px 0 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: no-repeat center center / cover;
+  }
+  &__title {
+    margin-bottom: 10px;
+    text-align: center;
+    @extend %roboto-400;
+    font-size: 48px;
+    line-height: 65px;
+    color: vars.$title;
+  }
+}
+
 .top-slider {
   padding-top: 65px;
   background-color: vars.$bg;
