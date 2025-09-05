@@ -598,7 +598,6 @@
   }
 }
 
-// IN PROGRESS
 .promo {
   // margin-bottom: 150px;
   padding: 155px 0 160px;
@@ -661,5 +660,100 @@
     align-items: center;
     gap: 150px;
     height: 170px;
+  }
+}
+
+.blog {
+  padding: 50px 0 160px;
+  background: url(../images/blog/blog-bg-01.png) no-repeat center center;
+  &__title {
+    // border: 1px solid red;
+  }
+  &__text {
+    // border: 1px solid red;
+  }
+
+  &__items {
+    // border: 1px solid red;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    &::after {
+      content: "";
+      background: url(../images/blog/blog-bg-02.png) no-repeat center center;
+      position: absolute;
+      right: -25px;
+      top: -32px;
+      width: 126px;
+      height: 53px;
+      z-index: -99;
+    }
+  }
+
+  &__item {
+    // border: 1px solid red;
+    width: 370px;
+    height: auto;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    transition: all 0.5s;
+  }
+
+  &__item:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+  }
+  &__item-link {
+    // border: 1px solid red;
+    display: block;
+  }
+  &__item-img {
+    // border: 1px solid red;
+  }
+
+  &__item-info {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 35px;
+    gap: 15px;
+  }
+  &__item-about {
+    // border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-author {
+    // border: 1px solid red;
+    .fa-user {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+  &__item-date {
+    // border: 1px solid red;
+    .fa-clock {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-title {
+    // border: 1px solid red;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 32px;
+    color: vars.$title;
+  }
+
+  &__link {
+    // border: 1px solid red;
+    color: vars.$default;
+    transition: all 0.5s;
+  }
+  &__link:hover {
+    // border: 1px solid red;
+    color: vars.$accent-button;
   }
 }

@@ -1,4 +1,5 @@
 $(function () {
+  // Slider
   $(".top-slider__inner").slick({
     dots: true,
     arrows: false,
@@ -7,6 +8,7 @@ $(function () {
     autoplaySpeed: 8000,
   });
 
+  // Rating stars
   $(".stars").rateYo({
     starWidth: "17px",
     normalFill: "#ccccce",
@@ -14,8 +16,7 @@ $(function () {
     readOnly: true,
   });
 
-  // ----------------
-
+  // Countdown
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
@@ -54,9 +55,7 @@ $(function () {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-  //var deadline = 'July 17 2017 07:59:59 GMT-0700';
+
   var deadline = $(".countdown").attr("data-time");
   initializeClock(".countdown", deadline);
 });
-
-// -------------------
