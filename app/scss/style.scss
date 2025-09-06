@@ -182,6 +182,7 @@
   }
 }
 
+// Login / Register
 .top {
   &__container {
     // border: 1px solid red;
@@ -202,6 +203,130 @@
     color: vars.$title;
   }
 }
+
+.modal {
+  // border: 1px solid blue;
+  .container {
+    // border: 1px solid blue;
+  }
+  &__inner {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 115px 0 115px;
+  }
+  &__links {
+    // border: 1px solid red;
+    display: flex;
+    gap: 60px;
+    margin-bottom: 55px;
+    @extend %roboto-400;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  &__reg {
+    color: vars.$default;
+  }
+  &__log {
+    color: vars.$default;
+  }
+  &__log--active {
+    @extend %roboto-700;
+    color: vars.$accent;
+  }
+
+  &__form {
+    // border: 1px solid red;
+    min-width: 570px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__form-group {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-group--checkbox {
+    // border: 1px solid red;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+  }
+  &__input--checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  &__label--checkbox {
+    position: relative;
+    &::before {
+      border: 1px solid vars.$default;
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      left: -20px;
+      top: 6px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 13px;
+      left: -19px;
+      top: 7px;
+      background: url(../images/icons/check-mark.svg) no-repeat center center /
+        cover;
+      transform: scale(0);
+      transition: transform all 0.2s;
+    }
+  }
+  &__input--checkbox:checked + &__label--checkbox::after {
+    transform: scale(1);
+  }
+
+  &__input {
+    border: none;
+    height: 60px;
+    margin-top: 15px;
+    padding: 0 15px;
+    background-color: vars.$bg;
+  }
+  &__form-group:nth-child(1) &__input {
+    margin-bottom: 40px;
+  }
+  &__form-group:nth-child(2) &__input {
+    margin-bottom: 60px;
+  }
+  &__btn {
+    height: 60px;
+    margin-bottom: 20px;
+    @extend %roboto-400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #292929;
+    cursor: pointer;
+  }
+  &__reminder {
+    // border: 1px solid red;
+    color: vars.$accent;
+  }
+}
+// ----------
 
 .top-slider {
   padding-top: 65px;
@@ -514,7 +639,8 @@
     color: vars.$title;
   }
 }
-// Repeat Block
+
+// Card
 .product-item {
   // border: 1px solid red;
   // Disable vision.
@@ -618,6 +744,7 @@
     pointer-events: auto;
   }
 }
+// ----------
 
 .promo {
   // margin-bottom: 150px;
