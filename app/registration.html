@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iShop MarCho</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img class="logo__img" src="./images/logo.png" alt="logo" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link menu__list-link--active" href="#"
+                  >HOME</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">SHOP</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">PAGE</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">BLOG</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a class="user-nav__link" href="#"
+              ><i class="fa-solid fa-user"></i
+            ></a>
+            <a class="user-nav__link" href="#"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <a class="user-nav__link" href="#">
+              <i class="fa-solid fa-heart"></i>
+              <span class="user-nav__num">7</span>
+            </a>
+            <a class="user-nav__link" href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="user-nav__num">7</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="top">
+        <div
+          class="top__container"
+          style="
+            background-image: url(./images/breadcrumb/breadcrumbs-bg-01.jpg);
+          "
+        >
+          <div class="container">
+            <h2 class="top__title">REGISTER</h2>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">Register</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="modal">
+        <div class="container">
+          <div class="modal__inner">
+            <div class="modal__links">
+              <a class="modal__reg modal__log--active" href="#">REGISTER</a>
+              <a class="modal__log" href="#">LOGIN</a>
+            </div>
+            <form action="/modal" method="post" class="modal__form">
+              <div class="modal__form-group modal__form-group-first">
+                <label class="modal__label" for="login"
+                  >Username or email address*</label
+                >
+                <input
+                  class="modal__input"
+                  type="text"
+                  name="login"
+                  id="login"
+                  required
+                />
+              </div>
+
+              <div
+                class="modal__form-group modal__form-group-second modal__form-group-second-reg"
+              >
+                <label class="modal__label" for="password">Password*</label>
+                <input
+                  class="modal__input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                />
+              </div>
+
+              <div class="modal__actions">
+                <p class="modal__notice">
+                  A password will be sent to your email address.
+                </p>
+                <p class="modal__privacy-notice"></p>
+                  Your personal data will be used to support your experience
+                  throughout this website, to manage access to your account, and
+                  for other purposes described in our privacy policy.
+                </p>
+              </div>
+
+              <div class="modal__form-group modal__form-group--checkbox">
+                <input
+                  class="modal__input--checkbox"
+                  type="checkbox"
+                  id="rememberMe"
+                  name="rememberMe"
+                />
+                <label class="modal__label--checkbox" for="rememberMe"
+                  >Agree with Terms & Conditions</label
+                >
+              </div>
+              <button class="modal__btn" type="submit">REGISTER</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo/Adress/ScialMedia -->
+          <div class="footer-top__item">
+            <a class="logo" href="#">
+              <img class="logo__img" src="./images/logo.png" alt="logo" />
+            </a>
+            <address class="footer-top__adress">
+              No. 342 - London Oxford Street, 012 United States
+            </address>
+            <a class="footer-top__email" href="mailto:youremail@gmail.com"
+              >youremail@gmail.com</a
+            >
+            <a class="footer-top__phone" href="tel:+02838388393"
+              >+02838388393</a
+            >
+            <ul class="footer-top__social-list">
+              <li class="footer-top__social-item">
+                <a class="footer-top__social-link" href="#"
+                  ><i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="footer-top__social-item">
+                <a class="footer-top__social-link" href="#"
+                  ><i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="footer-top__social-item">
+                <a class="footer-top__social-link" href="#"
+                  ><i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="footer-top__social-item">
+                <a class="footer-top__social-link" href="#"
+                  ><i class="fa-brands fa-google"></i>
+                </a>
+              </li>
+              <li class="footer-top__social-item">
+                <a class="footer-top__social-link" href="#"
+                  ><i class="fa-brands fa-pinterest-p"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- UsefulLinks -->
+          <div class="footer-top__item">
+            <h6 class="footer-top__title">Useful Links</h6>
+            <ul class="footer-top__list">
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="#">About Us</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="#">Terms & Conditions</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="#">Contact Us</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="#">Help & Support</a>
+              </li>
+            </ul>
+          </div>
+          <!-- MyAccount -->
+          <div class="footer-top__item">
+            <h6 class="footer-top__title">My Account</h6>
+            <ul class="footer-top__list">
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="">My Account</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="">Cart</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="">My Wishlist</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="">Registration</a>
+              </li>
+              <li class="footer-top__list-item">
+                <a class="footer-top__item-link" href="">Check Out</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Subscribe -->
+          <div class="footer-top__item">
+            <h6 class="footer-top__title">Subscribe Our Newsletter</h6>
+            <p class="footer-top__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida.
+            </p>
+            <form class="footer-top__form" action="#" method="post">
+              <input
+                class="footer-top__form-input"
+                type="email"
+                placeholder="Your Email address"
+                required
+              />
+              <button class="footer-top__form-btn" type="submit">
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Rights/Accept -->
+        <div class="footer-bottom">
+          <p class="footer-bottom__item footer-bottom__rights">
+            © 2019 CodeAstrology. All Rights Reserved.
+          </p>
+          <p class="footer-bottom__item footer-bottom__accept">
+            We Accept
+            <span class="footer-bottom__accept-icon"
+              ><img src="./images/icons/footer__accept-Visa.png" alt="Visa"
+            /></span>
+            <span class="footer-bottom__accept-icon"
+              ><img
+                src="./images/icons/footer__accept-masterCard.png"
+                alt="Master Card"
+            /></span>
+            <span class="footer-bottom__accept-icon"
+              ><img src="./images/icons/footer__accept-PayPal.png" alt="PayPal"
+            /></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/fd9d46e04c.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/main.min.js"></script>
+</html>

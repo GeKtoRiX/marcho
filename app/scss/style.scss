@@ -239,11 +239,10 @@
 
   &__form {
     // border: 1px solid red;
-    min-width: 570px;
+    width: 570px;
     display: inline-flex;
     flex-direction: column;
   }
-
   &__form-group {
     // border: 1px solid red;
     display: flex;
@@ -305,12 +304,24 @@
     padding: 0 15px;
     background-color: vars.$bg;
   }
-  &__form-group:nth-child(1) &__input {
+
+  &__form-group-first {
     margin-bottom: 40px;
   }
-  &__form-group:nth-child(2) &__input {
+  &__form-group-second {
     margin-bottom: 60px;
   }
+  &__form-group-second-reg {
+    margin-bottom: 30px;
+  }
+  &__actions {
+    // border: 1px solid red;
+    margin-bottom: 40px;
+  }
+  &__notice {
+    margin-bottom: 30px;
+  }
+
   &__btn {
     height: 60px;
     margin-bottom: 20px;
