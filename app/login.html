@@ -76,6 +76,53 @@
           </div>
         </div>
       </section>
+      <section class="modal">
+        <div class="container">
+          <div class="modal__inner">
+            <div class="modal__links">
+              <a class="modal__reg" href="#">REGISTER</a>
+              <a class="modal__log modal__log--active" href="#">LOGIN</a>
+            </div>
+            <form action="/modal" method="post" class="modal__form">
+              <div class="modal__form-group">
+                <label class="modal__label" for="login"
+                  >Username or email address*</label
+                >
+                <input
+                  class="modal__input"
+                  type="text"
+                  name="login"
+                  id="login"
+                  required
+                />
+              </div>
+              <div class="modal__form-group">
+                <label class="modal__label" for="password">Password*</label>
+                <input
+                  class="modal__input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                />
+              </div>
+              <div class="modal__form-group modal__form-group--checkbox">
+                <input
+                  class="modal__input--checkbox"
+                  type="checkbox"
+                  id="rememberMe"
+                  name="rememberMe"
+                />
+                <label class="modal__label--checkbox" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button class="modal__btn" type="submit">LOG IN</button>
+              <a href="#" class="modal__reminder">Lost your password?</a>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">

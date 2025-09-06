@@ -14,7 +14,9 @@ body {
   color: vars.$default;
   @extend %quicksand-500;
 }
-
+.header--404-page {
+  background-color: vars.$bg;
+}
 .main {
   flex-grow: 1;
 }
@@ -25,10 +27,65 @@ body {
   padding: 0 15px;
 }
 
-.header,
-.main,
-.footer,
-.container {
-  border: 1px solid blue;
-  margin-top: 3px;
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 65px;
+  color: vars.$title;
+}
+.text {
+  max-width: 570px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.breadcrumbs {
+  // border: 1px solid red;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 20px;
+  &__link {
+    color: vars.$default;
+  }
+  &__list {
+    // border: 1px solid red;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+  }
+  &__item {
+    // border: 1px solid red;
+    position: relative;
+
+    &:first-child::before {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      content: "";
+      background: url(../images/breadcrumb/breadcrumbs-home.png) no-repeat
+        center center / cover;
+      left: -9px;
+      top: 50%;
+      transform: translate(-50%, -60%);
+    }
+
+    &:not(:last-child)::after {
+      width: 9px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      background: url(../images/breadcrumb/breadcrumbs-arrows-right.png)
+        no-repeat center center / cover;
+      right: -22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child > a {
+      color: vars.$accent;
+    }
+  }
 }
