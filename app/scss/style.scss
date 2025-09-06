@@ -182,7 +182,7 @@
   }
 }
 
-// Login / Register
+// Login / Register / 404
 .top {
   &__container {
     // border: 1px solid red;
@@ -203,7 +203,6 @@
     color: vars.$title;
   }
 }
-
 .modal {
   // border: 1px solid blue;
   .container {
@@ -335,6 +334,37 @@
   &__reminder {
     // border: 1px solid red;
     color: vars.$accent;
+  }
+}
+.page-404 {
+  padding: 110px 0 120px;
+
+  &__inner {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    // border: 1px solid red;
+    width: 570px;
+  }
+  &__title {
+    // border: 1px solid red;
+    margin-bottom: 40px;
+    text-align: start;
+    color: #28384f;
+  }
+  &__text {
+    // border: 1px solid red;
+    max-width: 470px;
+    margin-bottom: 60px;
+  }
+  &__link {
+    display: inline-block;
+    @extend %btn;
+    border: none;
+    letter-spacing: normal;
   }
 }
 // ----------
