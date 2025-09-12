@@ -20,7 +20,9 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^6.0.1",
     "gulp-terser": "^2.1.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.7.1",
+    "jquery-form-styler": "^2.0.2",
     "rateyo": "^2.3.2",
     "sass": "^1.90.0",
     "slick-carousel": "^1.8.1"

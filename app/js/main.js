@@ -1,4 +1,50 @@
 $(function () {
+
+  // --- ОБРАБОТЧИК 1: УПРАВЛЕНИЕ АКТИВНОЙ КНОПКОЙ ---
+  // Этот код отвечает ТОЛЬКО за переключение класса --active
+  $('.shop__content-filter-btn').on('click', function () {
+    // Проверяем, не является ли кнопка уже активной
+    if (!$(this).hasClass('shop__content-filter-btn--active')) {
+      // Убираем класс у всех кнопок
+      $('.shop__content-filter-btn').removeClass('shop__content-filter-btn--active');
+      // Добавляем класс только нажатой кнопке
+      $(this).addClass('shop__content-filter-btn--active');
+    }
+  });
+
+  // --- ОБРАБОТЧИК 2: КЛИК ПО КНОПКЕ "СПИСОК" ---
+  // Этот код отвечает ТОЛЬКО за включение режима списка
+  $('.button-list').on('click', function () {
+    $('.product-item').addClass('product-item--list');
+    $('.shop__content-inner').addClass('shop__content-inner--list');
+  });
+
+  // --- ОБРАБОТЧИК 3: КЛИК ПО КНОПКЕ "СЕТКА" ---
+  // Этот код отвечает ТОЛЬКО за включение режима сетки
+  $('.button-grid').on('click', function () {
+    $('.product-item').removeClass('product-item--list');
+    $('.shop__content-inner').removeClass('shop__content-inner--list');
+  });
+
+  // select styles
+  $(".select-style").styler();
+
+  //rangeSlider
+  $(".filter-price__input").ionRangeSlider({
+    skin: "flat",
+    type: "double",
+    hide_min_max: true,
+    hide_from_to: true,
+    onStart: function (data) {
+      $(".filter-price__from").text(data.from);
+      $(".filter-price__to").text(data.to);
+    },
+    onChange: function (data) {
+      $(".filter-price__from").text(data.from);
+      $(".filter-price__to").text(data.to);
+    },
+  });
+
   // Slider
   $(".top-slider__inner").slick({
     dots: true,
@@ -55,7 +101,7 @@ $(function () {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-
   var deadline = $(".countdown").attr("data-time");
   initializeClock(".countdown", deadline);
+
 });

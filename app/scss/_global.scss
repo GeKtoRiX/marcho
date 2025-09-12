@@ -41,8 +41,8 @@ body {
   text-align: center;
 }
 
+// Хлебные крошки
 .breadcrumbs {
-  // border: 1px solid red;
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -51,13 +51,11 @@ body {
     color: vars.$default;
   }
   &__list {
-    // border: 1px solid red;
     display: flex;
     gap: 35px;
     align-items: center;
   }
   &__item {
-    // border: 1px solid red;
     position: relative;
 
     &:first-child::before {
@@ -87,5 +85,59 @@ body {
     &:last-child > a {
       color: vars.$accent;
     }
+  }
+}
+// Страницы карточек.
+.pagination {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  padding: 30px 0 30px;
+  &__arrows {
+    position: relative;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: inherit;
+    color: inherit;
+  }
+  &__prev::before {
+    content: "";
+    width: 6px;
+    height: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px;
+    position: absolute;
+    background-image: url(../images/icons/angle_left.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &__next::after {
+    content: "";
+    width: 6px;
+    height: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+    position: absolute;
+    background-image: url(../images/icons/angle_right.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    &--active {
+      color: vars.$accent;
+    }
+  }
+  &__link {
+    color: inherit;
   }
 }
